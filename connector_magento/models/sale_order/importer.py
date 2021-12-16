@@ -850,7 +850,7 @@ class SaleOrderLineImportMapper(Component):
             result = {"notes": notes}
         return result
 
-    @mapping
+"""     @mapping
     def tax_id(self, record):
         tax_percent = float(record["tax_percent"] or 0)
         if tax_percent > 0:
@@ -863,7 +863,7 @@ class SaleOrderLineImportMapper(Component):
             )
             if not tax_record:
                 raise FailedJobError("Missing tax for amount: %s" % tax_percent)
-            return {"tax_id": [(4, tax_record.id)]}
+            return {"tax_id": [(4, tax_record.id)]} """
 
     @mapping
     def price(self, record):
